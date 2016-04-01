@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html" charset="utf-8">
+		<title>Paint++</title>
+		<link rel="shortcut icon" href="../Images/Logo.png" />
+		<link rel="stylesheet" href="../Css/HomeCss.css">
+		<script src="../Js/jquery-1.11.1.js"></script>
+		<script src="../Js/FigureButtonHandling.js"></script>
+		<script src="../Js/ColorButtonHandling.js"></script>
+		<script src="../Js/ComboHandling.js"></script>
+		<script src="../Js/CanvasHandling.js"></script>
+		<script src="../Js/Circle.js"></script>
+		<script src="../Js/Elipse.js"></script>
+		<script src="../Js/Bezier.js"></script>
+        <script src="../Js/Linea/LineaPropia.js"></script>
+        <script src="../Js/Linea/LineaHtml.js"></script>
+        <script src="../Js/Rectangulo/RectHtml.js"></script>
+        <script src="../Js/Rectangulo/RectPropia.js"></script>
+        <script src="../Js/Triangulo/TriPropia.js"></script>
+        <script src="../Js/Triangulo/TriHtml.js"></script>
+		<!--Aca importa los js que uses-->
+	</head>
+	<body>
+		<div id="Container">
+			<header>
+				<section id="Logos">
+					<img id="Logo" src="../Images/LogoJunto.png">
+				</section>
+			</header>
+			<div id="Content">
+				<p id="BezierMessage" hidden="true">Doble click para terminar de dibujar la Curva(la figura se pintara luego del 2do pto)</p>
+                <p id="FigureMessage" hidden="true">Esta figura requiere de tres puntos</p>
+				<section id="FigurePicker">
+					<section id="Figures">	
+						<button class="Figure" id="Linea" style="background-color:orange">
+							<img class="Figura" src="../Images/Linea.png">
+						</button>
+						<button class="Figure" id="Rectangulo">
+							<img class="Figura" src="../Images/Cuadrado.png">
+						</button>
+						<button class="Figure" id="Triangulo">
+							<img class="Figura" src="../Images/Triangulo.png">
+						</button>
+						<button class="Figure" id="Circulo">
+							<img class="Figura" src="../Images/Circulo.png">
+						</button>
+						<button class="Figure" id="Elipse">
+							<img class="Figura" src="../Images/Elipse.png">
+						</button>
+						<button class="Figure" id="Bezier">
+							<img class="Figura" src="../Images/Bezier.png">
+						</button>
+					</section>
+					<section id="Algorithm">
+						<select class="Combo">
+							<option value="NULO">Seleccione un Algoritmo</option>
+							<option value="Propio">Algoritmo Propio</option>
+							<option value="HTML5">Algoritmo HTML5</option>
+						</select>
+					</section>
+					<section id="ColorList">
+						<section id="Actual">
+							Color actual: <button class="Color" id="ColorActual" style="background-color:black" disabled></button>
+							<p></p>
+						</section>
+						<section id="Lista">
+							<button class="Color" style="background-color:blue" id="Azul">
+							</button>
+							<button class="Color" style="background-color:red" id="Azul">
+							</button>
+							<button class="Color" style="background-color:yellow" id="Azul">
+							</button>
+							<button class="Color" style="background-color:orange" id="Azul">
+							</button>
+							<button class="Color" style="background-color:green" id="Azul">
+							</button>
+							<button class="Color" style="background-color:grey" id="Azul">
+							</button>
+							<button class="Color" style="background-color:black" id="Azul">
+							</button>
+							<button class="Color" style="background-color:purple" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(128,255,128)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(0,255,255)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(0,64,64)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(128,255,128)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(255,128,192)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(255,128,255)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(255,255,128)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(128,128,0)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(64,128,128)" id="Azul">
+							</button>
+							<button class="Color" style="background-color:rgb(128,64,0)" id="Azul">
+							</button>
+						</section>
+					</section>
+				</section>
+				<section id="CanvasWrapper">
+					<canvas id="Canvas" width=643 height=360>
+					</canvas>
+				</section>
+			</div>
+			<footer>
+			
+			</footer>
+		</div>
+	</body>
+</html>
